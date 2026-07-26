@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALL COUNTRY SERVICES AVAILABLE</title>
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', 'YOUR_PIXEL_ID');
+    fbq('track', 'PageView');
+    </script>
+    <noscript>
+    <img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"/>
+    </noscript>
+    <!-- End Meta Pixel Code -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #000;
+            color: #fff;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        .poster {
+            max-width: 850px;
+            margin: 20px auto;
+            background: linear-gradient(180deg, #0a0a0a 0%, #0d0d0d 50%, #0a0a0a 100%);
+            border: 2px solid #00ff88;
+            border-radius: 20px;
+            padding: 40px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 0 50px rgba(0, 255, 136, 0.3);
+        }
+        .poster::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(0, 255, 136, 0.03) 0%, transparent 70%);
+            animation: pulse 4s ease-in-out infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.1); opacity: 1; }
+        }
+        @keyframes glow {
+            0%, 100% { box-shadow: 0 0 20px rgba(0, 255, 136, 0.5); }
+            50% { box-shadow: 0 0 40px rgba(0, 255, 136, 0.8); }
+        }
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+            z-index: 1;
+        }
+        .header h1 {
+            font-size: 3rem;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            text-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+            animation: slideIn 0.8s ease;
+        }
+        .header h1 span {
+            color: #00ff88;
+            text-shadow: 0 0 30px rgba(0, 255, 136, 0.5);
+        }
+        .subtitle {
+            color: #666;
+            font-size: 1rem;
+            margin-top: 10px;
+            letter-spacing: 2px;
+        }
+        .services {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            position: relative;
+            z-index: 1;
+        }
+        .service-row {
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, #111 0%, #1a1a1a 100%);
+            border: 1px solid #222;
+            border-radius: 15px;
+            padding: 20px 25px;
+            transition: all 0.3s ease;
+            animation: slideIn 0.5s ease;
+            animation-fill-mode: both;
+        }
+        .service-row:nth-child(1) { animation-delay: 0.1s; }
+        .service-row:nth-child(2) { animation-delay: 0.15s; }
+        .service-row:nth-child(3) { animation-delay: 0.2s; }
+        .service-row:nth-child(4) { animation-delay: 0.25s; }
+        .service-row:nth-child(5) { animation-delay: 0.3s; }
+        .service-row:nth-child(6) { animation-delay: 0.35s; }
+        .service-row:nth-child(7) { animation-delay: 0.4s; }
+        .service-row:nth-child(8) { animation-delay: 0.45s; }
+        .service-row:nth-child(9) { animation-delay: 0.5s; }
+        .service-row:nth-child(10) { animation-delay: 0.55s; }
+        .service-row:hover {
+            transform: translateX(10px);
+            border-color: #00ff88;
+            box-shadow: 0 0 30px rgba(0, 255, 136, 0.2);
+        }
+        .service-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            font-size: 24px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+        .whatsapp { background: linear-gradient(135deg, #25d366, #128c7e); }
+        .instagram { background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+        .facebook { background: linear-gradient(135deg, #1877f2, #0d47a1); }
+        .snapchat { background: linear-gradient(135deg, #fffc00, #ffeb3b); }
+        .call-history { background: linear-gradient(135deg, #00ff88, #00cc6a); }
+        .call-record { background: linear-gradient(135deg, #ff4444, #d32f2f); }
+        .location { background: linear-gradient(135deg, #00ff88, #00e676); }
+        .email { background: linear-gradient(135deg, #ea4335, #c62828); }
+        .gallery { background: linear-gradient(135deg, #9c27b0, #7b1fa2); }
+        .phone { background: linear-gradient(135deg, #444, #222); }
+        
+        .service-name {
+            flex: 1;
+            font-size: 1.2rem;
+            color: #fff;
+            font-weight: 600;
+        }
+        .price-container {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .original-price {
+            color: #00ff88;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+        }
+        .discounted-price {
+            color: #666;
+            font-size: 1.3rem;
+            text-decoration: line-through;
+            position: relative;
+        }
+        .bottom-section {
+            margin-top: 40px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        .telegram-btn {
+            background: linear-gradient(135deg, #0088cc 0%, #00a8e8 50%, #0088cc 100%);
+            background-size: 200% auto;
+            color: #fff;
+            padding: 22px 50px;
+            border-radius: 50px;
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 1.4rem;
+            font-weight: bold;
+            text-decoration: none;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 30px rgba(0, 136, 204, 0.5);
+            transition: all 0.3s ease;
+            animation: glow 2s ease-in-out infinite;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .telegram-btn:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 10px 40px rgba(0, 136, 204, 0.7);
+            background-position: right center;
+        }
+        .telegram-icon {
+            font-size: 1.8rem;
+            animation: bounce 1s ease infinite;
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+        .timing {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 25px;
+        }
+        .timing-item {
+            text-align: center;
+            padding: 15px 25px;
+            background: #111;
+            border-radius: 10px;
+            border: 1px solid #222;
+        }
+        .timing-item .icon {
+            font-size: 2.5rem;
+            margin-bottom: 8px;
+        }
+        .timing-item p {
+            color: #888;
+            font-size: 0.9rem;
+        }
+        .timing-item strong {
+            color: #00ff88;
+        }
+        .features {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin-top: 35px;
+            padding-top: 25px;
+            border-top: 1px solid #222;
+        }
+        .feature {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 10px 20px;
+            background: #111;
+            border-radius: 10px;
+            border: 1px solid #222;
+            transition: all 0.3s ease;
+        }
+        .feature:hover {
+            border-color: #00ff88;
+            transform: translateY(-3px);
+        }
+        .feature-icon {
+            font-size: 1.8rem;
+            color: #00ff88;
+        }
+        .feature p {
+            color: #888;
+            font-size: 0.85rem;
+            line-height: 1.4;
+        }
+        .feature strong {
+            color: #00ff88;
+            display: block;
+            margin-bottom: 2px;
+        }
+        .glow-text {
+            text-shadow: 0 0 10px currentColor;
+        }
+        .badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, #ff4444, #ff6b6b);
+            color: #fff;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            animation: pulse 1.5s ease infinite;
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+    <div class="poster">
+        <div class="badge">🔥 LIMITED OFFER</div>
+        
+        <div class="header">
+            <h1>ALL COUNTRY <span>SERVICES AVAILABLE</span></h1>
+            <p class="subtitle">100% SAFE, SECURE & TRUSTED WORK</p>
+        </div>
+        
+        <div class="services">
+            <div class="service-row">
+                <div class="service-icon whatsapp">💬</div>
+                <div class="service-name">WHATSAPP ACCESS</div>
+                <div class="price-container">
+                    <span class="original-price">1199/-₹</span>
+                    <span class="discounted-price">1599</span>
+                </div>
+            </div>
+            
+            <div class="service-row">
+                <div class="service-icon instagram">📷</div>
+                <div class="service-name">INSTAGRAM ACCESS</div>
+                <div class="price-container">
+                    <span class="original-price">1199/-₹</span>
+                    <span class="discounted-price">1599</span>
+                </div>
+            </div>
+            
+            <div class="service-row">
+                <div class="service-icon facebook">📘</div>
+                <div class="service-name">FACEBOOK ACCESS</div>
+                <div class="price-container">
+                    <span class="original-price">1199/-₹</span>
+                    <span class="discounted-price">1599</span>
+                </div>
+            </div>
+            
+            <div class="service-row">
+                <div class="service-icon snapchat">👻</div>
+                <div class="service-name">SNAPCHAT ACCESS</div>
+                <div class="price-container">
+                    <span class="original-price">1199/-₹</span>
+                    <span class="discounted-price">1599</span>
+                </div>
+            </div>
+            
+            <div class="service-row">
+                <div class="service-icon call-history">📞</div>
+                <div class="service-name">CALL HISTORY ACCESS</div>
+                <div class="price-container">
+                    <span class="original-price">2199/-₹</span>
+                    <span class="discounted-price">2999</span>
+                </div>
+            </div>
+            
+            <div class="service-row">
+                <div class="service-icon call-record">🎤</div>
+                <div class="service-name">CALL RECORD ACCESS</div>
+                <div class="price-container">
+                    <span class="original-price">2199/-₹</span>
+                    <span class="discounted-price">2999</span>
+                </div>
+            </div>
+            
+            <div class="service-row">
+                <div class="service-icon location">📍</div>
+                <div class="service-name">LIVE LOCATION TRACKING</div>
+                <div class="price-container">
+                    <span class="original-price">2999/-₹</span>
+                    <span class="discounted-price">3299</span>
+                </div>
+            </div>
+            
+            <div class="service-row">
+                <div class="service-icon email">✉️</div>
+                <div class="service-name">EMAIL PASSWORD ACCESS</div>
+                <div class="price-container">
+                    <span class="original-price">2999/-₹</span>
+                    <span class="discounted-price">3299</span>
+                </div>
+            </div>
+            
+            <div class="service-row">
+                <div class="service-icon gallery">🖼️</div>
+                <div class="service-name">GALLERY ACCESS HACKING</div>
+                <div class="price-container">
+                    <span class="original-price">2999/-₹</span>
+                    <span class="discounted-price">3299</span>
+                </div>
+            </div>
+            
+            <div class="service-row">
+                <div class="service-icon phone">📱</div>
+                <div class="service-name">FULL PHONE ACCESS HACKING</div>
+                <div class="price-container">
+                    <span class="original-price">3599/-₹</span>
+                    <span class="discounted-price">5999</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bottom-section">
+            <a href="https://t.me/YOUR_TELEGRAM_USERNAME" target="_blank" class="telegram-btn" onclick="fbq('track', 'Lead');">
+                <span class="telegram-icon">✈️</span>
+                JOIN NOW ON TELEGRAM
+            </a>
+            
+            <div class="timing">
+                <div class="timing-item">
+                    <div class="icon">🕐</div>
+                    <p><strong>24 HOURS</strong><br>Available</p>
+                </div>
+                <div class="timing-item">
+                    <div class="icon">📅</div>
+                    <p><strong>24*7</strong><br>MONDAY TO SUNDAY</p>
+                </div>
+                <div class="timing-item">
+                    <div class="icon">⚡</div>
+                    <p><strong>INSTANT</strong><br>DELIVERY</p>
+                </div>
+            </div>
+            
+            <div class="features">
+                <div class="feature">
+                    <span class="feature-icon">✓</span>
+                    <p><strong>100% SAFE</strong>& SECURE</p>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">✓</span>
+                    <p><strong>24*7 SUPPORT</strong>AVAILABLE</p>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">✓</span>
+                    <p><strong>YOUR PRIVACY</strong>OUR PRIORITY</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
